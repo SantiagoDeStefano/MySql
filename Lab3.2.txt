@@ -1,0 +1,36 @@
+USE cat_app;
+CREATE TABLE unique_cats (
+	cat_id INT NOT NULL PRIMARY KEY,
+    name varchar(100),
+    age INT
+);
+INSERT INTO unique_cats (cat_id, name, age)
+VALUES
+	(1, 'Fred', 23),
+	(2, 'Louise', 3),
+	(3, 'James', 3);
+CREATE TABLE unique_cats2 (
+	cat_id INT NOT NULL PRIMARY KEY auto_increment,
+    name varchar(100),
+    age INT
+);
+INSERT INTO unique_cats2 (name, age)
+VALUES
+	('Skippy', 4),
+	('Jiff', 3),
+	('Jiff', 3),
+	('Jiff', 3),
+	('Skippy', 4);
+SELECT * FROM unique_cats2;
+CREATE TABLE employees (
+	id INT NOT NULL PRIMARY KEY auto_increment,
+    first_name varchar(255) NOT NULL,
+    last_name varchar(255) NOT NULL,
+    middle_name varchar(255),
+    age INT NOT NULL,
+    current_status varchar(255) NOT NULL DEFAULT 'employed'
+);
+INSERT INTO employees (first_name, last_name, age)
+VALUES
+	('Dora', 'Smith', 58);
+SELECT * FROM employees;

@@ -1,0 +1,7 @@
+CREATE DATABASE cat_app;
+USE cat_app;
+CREATE TABLE pastries (
+	name VARCHAR(50),
+    age INT
+);
+DROP TABLE pastries;
