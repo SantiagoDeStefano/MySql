@@ -1,0 +1,6 @@
+USE book_data;
+SELECT title FROM books ORDER BY pages DESC limit 1;
+SELECT title, released_year FROM books ORDER BY released_year DESC LIMIT 3;
+SELECT title, author_lname FROM books WHERE author_lname LIKE '% %';
+SELECT title, released_year, stock_quantity FROM books ORDER BY stock_quantity LIMIT 3;
+SELECT title, author_lname FROM books ORDER BY  author_lname, title;
