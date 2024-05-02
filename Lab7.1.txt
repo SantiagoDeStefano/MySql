@@ -1,0 +1,6 @@
+USE book_data;
+SELECT COUNT(*) AS number_book FROM books;
+SELECT COUNT(*) AS number_book, released_year FROM books GROUP BY released_year ORDER BY released_year;
+SELECT SUM(stock_quantity) AS sum_stock FROM books;
+SELECT AVG(released_year) AS avg_released_year FROM books GROUP BY CONCAT(author_fname, ' ', author_lname);
+SELECT CONCAT(author_fname, ' ', author_lname) AS fullname, pages FROM books WHERE pages = (SELECT MAX(pages) FROM books);
